@@ -1,18 +1,18 @@
 /* Variables*/
 :root {
-  --body-color: #090c18;
+  --body-color: #181b24;
 
-  --border-color: #ffffff21;
+  --border-color: #ffffff00;
   --border-style: solid;
-  --border-width: 1px;
+  --border-width: 0px;
   --border-radius:  0 0 8px 8px;
 
 
-  --section-impair-color: #00000011;
-  --section-pair-color: #ffffff36;
+  --section-impair-color: #00000007;
+  --section-pair-color: #ffffff1c;
   --section-text-color: #ffffff;
 
-  --headbar-color: #1c1c1f;
+  --headbar-color: linear-gradient(180deg, #747474 0%, #4e4d4d5b 100%);
   --headbar-text-color: #ffffff;
   --headbar-font-family: "Poppins", sans-serif;  
   --headbar-font-weight: 100;
@@ -42,7 +42,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0.10;
+  opacity: 0.15;
 }
 
 .container {
@@ -58,6 +58,17 @@ body {
   background-color: var(--body-color);
 }
 
+.profile-picture {
+  background-image: url('profile-pic.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  border-style: var(--border-style);
+}
+
 .section {
   font-family: var(--section-font-family);
   font-size: var(--section-font-size);
@@ -71,19 +82,27 @@ body {
 
   position: relative;
   width: 98%;
-  height: 98%;
+  height: 85vh;
+
   scroll-snap-align: start;
+  scroll-snap-type: y mandatory;
   scroll-snap-stop: always;
-  padding: 0 20px 20px 20px;
+  padding: 00px 20px 0px 20px;
   margin-left: 1%;
   margin-right: 1%;
-  margin-bottom: 10%;
-  box-sizing: border-box;
-  top: 10%;
+  box-sizing: content-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  z-index: 6;
+}
+
+.section:nth-child(-n+2){
+  color: red;
+  padding-top: 20px;
+}
+
+.section:last-child{
+  color: rgb(0, 174, 255);
+  
 }
 
 .section h1{
@@ -106,7 +125,8 @@ body {
 }
 
 .headbar {
-  background-color: var(--headbar-color);
+  /*background-color: var(--headbar-color);*/
+  background-image: var(--headbar-color);
   position:sticky;
   border-radius: var(--border-radius);
   border-width: var(--border-width);
@@ -118,7 +138,7 @@ body {
   margin-left: 0.5%;
   margin-right: 0.5%;
   top: 0;
-  z-index: 7;
+  z-index: 1;
 }
 
 .headbar p {
