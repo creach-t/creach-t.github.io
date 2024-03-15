@@ -60,13 +60,12 @@ body {
 
 .profile-picture {
   background-image: url('profile-pic.png');
-  background-size: cover;
+  background-size:contain;
   background-position: center;
   background-repeat: no-repeat;
-  width: 40%;
-  height: 40%;
-  border-radius: 50%;
-  border-style: var(--border-style);
+  width: 125px;
+  height: 125px;
+  border-radius: 20%;
 }
 
 .section {
@@ -82,12 +81,12 @@ body {
 
   position: relative;
   width: 98%;
-  height: 85vh;
+  height: 80vh;
 
   scroll-snap-align: start;
   scroll-snap-type: y mandatory;
   scroll-snap-stop: always;
-  padding: 00px 20px 0px 20px;
+  padding: 20px 20px 0px 20px;
   margin-left: 1%;
   margin-right: 1%;
   box-sizing: content-box;
@@ -95,13 +94,16 @@ body {
   flex-direction: column;
 }
 
+/*premiere section*/
 .section:nth-child(-n+2){
-  color: red;
+/*   color: red; */
   padding-top: 20px;
 }
 
+/*derniere section*/
 .section:last-child{
-  color: rgb(0, 174, 255);
+/*   color: rgb(0, 174, 255); */
+height: 99vh;
   
 }
 
