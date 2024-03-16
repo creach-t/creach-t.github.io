@@ -6,9 +6,9 @@
   
   
   
-    --border-color: #ffffff00;
+    --border-color: #00fff200;
     --border-style: solid;
-    --border-width: 0px;
+    --border-width: 1px;
     --border-radius: 0px;
   
   
@@ -16,12 +16,16 @@
   
   
     --headbar-color: linear-gradient(180deg, #747474 0%, #4e4d4d5b 100%);
-    --headbar-text-color: #ffffff;
+    --headbar-text-color: 1#ffffff;
     --headbar-font-family: "Poppins", sans-serif;  
     --headbar-font-weight: 100;
     --headbar-font-size: 1.5rem;
     --headbar-font-style: normal;
   
+  }
+
+  .body{
+    overflow: auto;
   }
   
   .container {
@@ -43,13 +47,13 @@
   
   .container-grid {
     display: grid;
-    grid-template-columns: 120px 1fr;
-    grid-template-rows: 50px 160px 120px 5px auto;
+    grid-template-columns: 120px auto;
+    grid-template-rows: 50px 160px 40px auto auto;
     gap: 0px 20px;
     grid-auto-flow: row;
     grid-template-areas:
       "title title "
-      "profil-picture description"
+      "profil description"
       "title-skills title-skills"
       "skills-carrousel skills-carrousel"
       "about about";
@@ -58,7 +62,9 @@
     background-image: linear-gradient(180deg, #202020 0%, #4e4d4dd8 100%);
     border-radius: var(--border-radius);
     height: 100vh;
-    width: 100vw;
+    width: clamp(480px, 80vw, 1000px);
+    margin-left: auto;
+    margin-right: auto;
     border-style: var(--border-style);
     border-color: var(--border-color);
     border-width: var(--border-width);
@@ -87,31 +93,38 @@
   }
   
   .title { 
+    border: 1px solid violet;
     grid-area: title;
     font-size: var(--headbar-font-size);
     margin-left: 5px;
   }
   
   .profil-picture { 
-    grid-area: profil-picture;
     background-image: url('profile-pic.png');
-    border: 1px solid var(--border-color);
     box-shadow:#000000bb 5px 0px 10px 0px;
     border-radius: 50%;
     height: 120px;
     width: 120px;
-    margin-left: 5px;
+    margin-left: auto;
+    margin-right: auto;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
    }
+
+   .profil { 
+    grid-area: profil;
+    border: 1px solid var(--border-color);
+   }
   
   .description { 
+    border: 1px solid yellow;
     margin-right: 5px;
     grid-area: description;
    }
   
   .title-skills { 
+    border: 1px solid blue;
     grid-area: title-skills;
     margin-top: 10px;
     margin-left: 10px;
@@ -119,12 +132,14 @@
    }
   
   .skills-carrousel { 
+    border: 1px solid green;
     grid-area: skills-carrousel;
     margin-top: 10px;
     margin-left: 10px;
    }
   
-  .about { 
+  .about {
+    border: 1px solid red;
     grid-area: about;
     margin-top: 10px;
     margin-left: 10px;
@@ -145,7 +160,7 @@
         grid-auto-flow: row;
         grid-template-areas:
           "title"
-          "profil-picture"
+          "profil"
           "description"
           "title-skills"
           "skills-carrousel"
@@ -153,8 +168,10 @@
     }
 
     .profil-picture { 
-        /*center the image*/
-margin: 0 auto;
+    }
+
+    .profil { 
+        margin: 0 auto;
         margin-top: 10px;
         margin-bottom: 10px;
         background-image: url('profile-pic.png');
@@ -163,6 +180,11 @@ margin: 0 auto;
         border-radius: 50%;
         height: 100px;
         width: 100px;
+    }
+
+    .container-grid{
+        height: 100vh;
+        width: 100vw;
     }
 
     .description { 
