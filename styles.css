@@ -1,208 +1,173 @@
 /* Variables*/
 :root {
-  --body-color: #181b24;
-  --font-family: "Poppins", sans-serif;
-  --font-color: #ffffff;
-
-
-
-  --border-color: #ffffff;
-  --border-style: solid;
-  --border-width: 1px;
-  --border-radius: 8px;
-
-
-  --container-color: #00000007;
-
-
-  --headbar-color: linear-gradient(180deg, #747474 0%, #4e4d4d5b 100%);
-  --headbar-text-color: #ffffff;
-  --headbar-font-family: "Poppins", sans-serif;  
-  --headbar-font-weight: 100;
-  --headbar-font-size: 1.5rem;
-  --headbar-font-style: normal;
-
-}
-
-.container {
-  user-select: none;
-  background-color: var(--body-color);
-  content: "";
-  background-image: url('tree.svg');
-  background-size: clamp(300px, 80vw, 500px);
-  background-position: center;
-  background-repeat: no-repeat;
-  position:fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-
-.container-grid {
-  display: grid;
-  color: var(--font-color) ;
-  font-family: var(--font-family);
-  background-image: linear-gradient(180deg, #747474 0%, #4e4d4d5b 100%);
-  border-radius: var(--border-radius);
-  height: 100vh;
-  width: 80vw;
-  margin: 2% auto;
-  padding: 1% 2%;
-  border-style: var(--border-style);
-  border-color: var(--border-color);
-  border-width: var(--border-width);
-  grid-template-columns: 0.2fr 1fr;
-  grid-template-rows: 0.3fr auto 0.3fr 1fr 1fr);
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "title title "
-    "profil-picture description"
-    "title-skills title-skills"
-    "skills-carrousel skills-carrousel"
-    "about about";
-}
-
-.svg{
-  width: 1.8%;
-  position: fixed;
-  right: 1%;
-}
-
-.headbar {
-  grid-area: headbar;
-  padding: 1%;
-  border-color: var(--border-color);
-  border-style: var(--border-style);
-  border-width: var(--border-width);
-  background-image: var(--headbar-color);
-  color: var(--headbar-text-color);
-  font-family: var(--headbar-font-family);
-  font-weight: var(--headbar-font-weight);
-  font-size: var(--headbar-font-size);
-  font-style: var(--headbar-font-style);
-}
-
-.title { 
-  grid-area: title;
-  font-size: var(--headbar-font-size);
-}
-
-.profil-picture { 
-  grid-area: profil-picture;
-  background-image: url('profile-pic.png');
-  border-radius: 50%;
-  border-style: inset;
-  height: 120px;
-  width: 120px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
- }
-
-.description { 
-  grid-area: description;
+    --body-color: #181b24;
+    --font-family: "Poppins", sans-serif;
+    --font-color: #ffffff;
   
- }
-
-.title-skills { 
-  grid-area: title-skills;
-  padding: 2%;
-
- }
-
-.skills-carrousel { 
-  grid-area: skills-carrousel;
-
- }
-
-.about { 
-  grid-area: about;
-  padding: 2%;
-
-}
-
-.list{
-  width: 9rem;
-  height: 11rem;
-  background: #e5e5e594;
-  display: inline-block;
-  text-align: center;
-  border-radius: 5%;
-  position: relative;
-  overflow: hidden;
-  margin: 0rem 0rem 0 1rem;
-  cursor: pointer;
-}
-
-.skills-carrousel {
-  position: relative;
-  width: 97%;
-  height: 13.5rem;
-  background-color: rgba(241, 241, 241, 0);
-}
-
-#cards {
-  width: 80%;
-  overflow: hidden;
-  white-space: nowrap;
-  display: block;
-  list-style: none;
-  padding: 0;
-  position: relative;
-  left: 10%;
-  bottom: 60px;
-}
-
-.list p{
-  width: 300px hidden;
-}
-#prev {
-  display: inline-block;
-  position: absolute;
-  left: 2%;
-  cursor: pointer;
-  font-size: 60px;
-  z-index: 3;
-  width: 50px;
-  height: 50px;
-}
-#next {
-  display: inline-block;
-  position: absolute;
-  right: 2%;
-  cursor: pointer;
-  font-size: 60px;
-  z-index: 3;
-  width: 50px;
-  height: 50px;
-}
-#prev,
-#next{
-  margin-top: 11rem;
-  color: #aaaaaa;
-}
-@media (max-width: 600px) {
-  .skills-carrousel {
-  width: 95%;
-  height: 22rem;
-  margin: 0 2% 0 2%;
+  
+  
+    --border-color: #ffffff00;
+    --border-style: solid;
+    --border-width: 0px;
+    --border-radius: 0px;
+  
+  
+    --embed-color: #746b6b5b;
+  
+  
+    --headbar-color: linear-gradient(180deg, #747474 0%, #4e4d4d5b 100%);
+    --headbar-text-color: #ffffff;
+    --headbar-font-family: "Poppins", sans-serif;  
+    --headbar-font-weight: 100;
+    --headbar-font-size: 1.5rem;
+    --headbar-font-style: normal;
+  
   }
-  .list{
-    width: 17rem;
-    height: 17rem;
-    background: #e5e5e560;
-    display: inline-block;
-    text-align: center;
-    border-radius: 5%;
-    position: relative;
-    overflow: hidden;
-    margin: 6rem 1rem 0 1rem;
+  
+  .container {
+    user-select: none;
+    background-color: var(--body-color);
+    content: "";
+    background-image: url('tree.svg');
+    background-size: clamp(200px, 80vw, 500px);
+    background-position: center;
+    background-repeat: no-repeat;
+    position:fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    scrollbar-width: 100px;;
   }
-  #prev,
-#next{
-  margin-top: 9.5rem;
+  
+  
+  .container-grid {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 50px 160px 120px 5px auto;
+    gap: 0px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "title title "
+      "profil-picture description"
+      "title-skills title-skills"
+      "skills-carrousel skills-carrousel"
+      "about about";
+    color: var(--font-color) ;
+    font-family: var(--font-family);
+    background-image: linear-gradient(180deg, #202020 0%, #4e4d4dd8 100%);
+    border-radius: var(--border-radius);
+    height: 100vh;
+    width: 100vw;
+    border-style: var(--border-style);
+    border-color: var(--border-color);
+    border-width: var(--border-width);
+
+  }
+  
+  .svg{
+    width: 25px;
+    position: fixed;
+    top: 8px;
+    right: 1%;
+  }
+  
+  .headbar {
+    grid-area: headbar;
+    padding: 5px;
+    border-color: var(--border-color);
+    border-style: var(--border-style);
+    border-width: var(--border-width);
+    background-image: var(--headbar-color);
+    color: var(--headbar-text-color);
+    font-family: var(--headbar-font-family);
+    font-weight: var(--headbar-font-weight);
+    font-size: var(--headbar-font-size);
+    font-style: var(--headbar-font-style);
+  }
+  
+  .title { 
+    grid-area: title;
+    font-size: var(--headbar-font-size);
+    margin-left: 5px;
+  }
+  
+  .profil-picture { 
+    grid-area: profil-picture;
+    background-image: url('profile-pic.png');
+    border: 1px solid var(--border-color);
+    box-shadow:#000000bb 5px 0px 10px 0px;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    margin-left: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+  
+  .description { 
+    margin-right: 5px;
+    grid-area: description;
+   }
+  
+  .title-skills { 
+    grid-area: title-skills;
+    margin-top: 10px;
+    margin-left: 10px;
+  
+   }
+  
+  .skills-carrousel { 
+    grid-area: skills-carrousel;
+    margin-top: 10px;
+    margin-left: 10px;
+   }
+  
+  .about { 
+    grid-area: about;
+    margin-top: 10px;
+    margin-left: 10px;
+  
+  }
+
+  .embed {
+    border-radius: 3px;
+    background-color: var(--embed-color);
+  }
+  
+@media screen and (max-width: 480px) {
+    .container-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr auto 0.3fr repeat(2, 1fr);
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "title"
+          "profil-picture"
+          "description"
+          "title-skills"
+          "skills-carrousel"
+          "about";
+    }
+
+    .profil-picture { 
+        /*center the image*/
+margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-image: url('profile-pic.png');
+        border: 1px solid var(--border-color);
+        box-shadow:#000000bb 5px 0px 10px 0px;
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+    }
+
+    .description { 
+        margin-right: 5px;
+        margin-left: 5px;
+       }
 }
-}
+  
