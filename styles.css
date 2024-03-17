@@ -3,10 +3,7 @@
     --body-color: #181b24;
     --font-family: "Poppins", sans-serif;
     --font-color: #ffffff;
-  
-  
-  
-    --border-color: #88ff00ce;
+
     --border-style: solid;
     --border-width: 1px;
     --border-radius: 0px;
@@ -24,10 +21,10 @@
   
   }
 
-  .body{
-    overflow: auto;
-  }
-  
+body{
+  overflow: hidden;
+}
+
   .container {
     user-select: none;
     background-color: var(--body-color);
@@ -41,14 +38,18 @@
     right: 0;
     bottom: 0;
     left: 0;
-    scrollbar-width: 100px;;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
   }
-  
   
   .container-grid {
     display: grid;
     grid-template-columns: 120px auto;
-    grid-template-rows: 50px 160px 40px auto auto;
+    grid-template-rows: 50px 160px 25px auto auto;
     gap: 10px 10px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -59,7 +60,7 @@
       "about about";
     color: var(--font-color) ;
     font-family: var(--font-family);
-    background-image: linear-gradient(180deg, #202020 0%, #4e4d4dd8 100%);
+    background-image: linear-gradient(180deg, #202020e3 0%, #4e4d4dd8 100%);
     border-radius: var(--border-radius);
     height: 100vh;
     width: clamp(480px, 80vw, 1000px);
