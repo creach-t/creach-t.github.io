@@ -80,7 +80,7 @@ body{
     width: 25px;
     position: fixed;
     top: 8px;
-    right: 1%;
+    right: 30px;
   }
   
   .headbar {
@@ -99,7 +99,6 @@ body{
   
   .title { 
     border: 1px solid violet;
-
     display: flex;
     align-items: center;
     grid-area: title;
