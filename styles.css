@@ -15,7 +15,7 @@
     --headbar-color: linear-gradient(180deg, #747474 0%, #4e4d4d5b 100%);
     --headbar-text-color: #ffffff;
     --headbar-font-family: "Poppins", sans-serif;  
-    --headbar-font-weight: bold;
+    --headbar-font-weight: 400;
     --headbar-font-size: calc(var(--font-size) * 1.5);
   
 
@@ -198,6 +198,8 @@
   }
 /* RESPONSIVE */  
 @media screen and (max-width: 480px) {
-
+    .main{
+      padding: 1em;
+    }
 }
   
