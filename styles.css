@@ -226,6 +226,7 @@
     align-items: center;
     width: 70%;
     padding-left: 0.5em;
+    margin: auto;
   }
   .main__description{
     padding-left: 1;
