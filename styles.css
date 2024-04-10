@@ -3,6 +3,7 @@
     --body-color: #181b24;
     --font-family: "Poppins", sans-serif;
     --font-color: #ffffff;
+    --font-size: 1.2rem;
 
     --border-style: solid;
     --border-width: 0.05em;
@@ -15,16 +16,25 @@
     --headbar-text-color: #ffffff;
     --headbar-font-family: "Poppins", sans-serif;  
     --headbar-font-weight: bold;
-    --headbar-font-size: 1.5rem;
+    --headbar-font-size: calc(var(--font-size) * 1.5);
   
 
     --icon-height: 1.6rem;
   }
 
+  body {
+    margin: 0;
+    background-color: #000000;
+  }
+
+  img{
+    max-width: 100%;
+  }
+
   .container {
     background-color: var(--body-color);
     font-family: var(--headbar-font-family);
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 0 auto;
     width: 100vw;
     height: 100vh;
@@ -36,7 +46,7 @@
     justify-content: space-between;
     color: var(--font-color);
     text-shadow: 2px 2px 4px #000000;
-    background-image: linear-gradient(#302f2fce 100%, #080000fa 0%), url('tree.svg');
+    background-image: linear-gradient(180deg, #000000d8 0%, #000000b9 100%), url('image/tree.svg');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -48,6 +58,7 @@
     color: var(--headbar-text-color);
     font-weight: var(--headbar-font-weight);
     font-size: var(--headbar-font-size);
+    margin: 0;
   }
   
   .header__title { 
