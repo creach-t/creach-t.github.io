@@ -101,12 +101,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 0.5em;
+    row-gap: 1rem;
     list-style-type: none;
    }
 
    .skills__list__item {
-    flex-basis: 25vw;
+    flex-basis: 8rem;
    }
   
   .main__about {
@@ -196,6 +196,7 @@
     height: var(--icon-height);
     padding-left: calc(var(--icon-height) + 0.5rem);
   }
+
 /* RESPONSIVE */  
 @media screen and (max-width: 480px) {
     .main{
