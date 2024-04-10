@@ -68,6 +68,7 @@
   .header__title { 
     border: var(--border-width) solid var(--div-border-color);
     font-size: var(--headbar-font-size);
+    margin: 0;
   }
 
   .main__title{
@@ -208,8 +209,32 @@
 
 /* RESPONSIVE */  
 @media screen and (max-width: 480px) {
-    .main{
-      padding: 1em;
-    }
+  
+  .main__profil {
+    width: auto;
+    margin: auto;
+    margin-bottom: 1em;
+  }
+
+  .main__title {
+    margin: 0;
+    padding-left: 0.5em;
+    font-size: 1.8em;
+  }
+
+  .main{
+    align-items: center;
+    width: 70%;
+    padding-left: 0.5em;
+  }
+  .main__description{
+    padding-left: 1;
+    margin: 0;
+  }
+
+  .main__about{
+    padding-left: 2em;
+  }
+
 }
   
