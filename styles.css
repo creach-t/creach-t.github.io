@@ -17,6 +17,8 @@
     --headbar-font-family: "Poppins", sans-serif;  
     --headbar-font-weight: 400;
     --headbar-font-size: calc(var(--font-size) * 1.5);
+
+    --title-font-size: calc(var(--font-size) * 1.2);
   
 
     --icon-height: 1.6rem;
@@ -38,7 +40,7 @@
     min-width: 400px;
     max-width: 1400px;
     margin: 0 auto;
-    width: 100vw;
+    width: 95vw;
     box-shadow:#000000bb 5px 5px 10px 0px;
   }
   
@@ -53,7 +55,6 @@
     background-position: top;
     background-repeat: no-repeat;
     padding: 3rem;
-    height: 100vh;
   }
   
   .header {
@@ -70,7 +71,9 @@
   }
 
   .main__title{
-    width: 100%;
+    width: 90vw;
+    font-size: calc(var(--font-size) * 2);
+    text-transform: uppercase;
   }
   
   .main__profil { 
@@ -84,17 +87,20 @@
    }
   
   .main__description { 
-    flex-grow: 2;
+    flex-grow: 6;
     padding-left: 2em;
    }
   
   .skills__title { 
+    width: 100%;
     border-bottom: var(--border-width) solid var(--div-border-color);
+    font-size: var(--title-font-size);
+    text-transform: uppercase;
     padding: 0 1rem;
    }
   
   .main__skills { 
-    width: 100vw;
+    width: 90%;
    }
 
   .skills__list { 
@@ -106,16 +112,19 @@
    }
 
    .skills__list__item {
+    font-size: 1.3em;
     flex-basis: 8rem;
    }
   
   .main__about {
-    flex-basis: 100vw;
-    height: 100vh;
+    flex-basis: 90%;
   }
 
   .main__about__title {
+    width: 100%;
     border-bottom: var(--border-width) solid var(--div-border-color);
+    font-size: var(--title-font-size);
+    text-transform: uppercase;
     padding: 0 1rem;
   }
 
