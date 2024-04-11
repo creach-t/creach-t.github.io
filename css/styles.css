@@ -254,6 +254,10 @@ img{
 }
 
 @media screen and (max-width: 600px) {
+:root{
+  --content-padding: 0rem;
+
+}
 
   .main__profil{
     flex-wrap: wrap;
