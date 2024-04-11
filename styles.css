@@ -3,6 +3,7 @@
     --body-color: #181b24;
     --font-family: "Poppins", sans-serif;
     --font-color: #ffffff;
+    
     --font-size: 1.2rem;
 
     --border-style: solid;
@@ -12,14 +13,14 @@
 
     --div-border-color: #97c9e63d;
   
-    --headbar-color: linear-gradient(180deg, #1e1f4293 0%, #1d1c1c5b 100%);
-    --headbar-text-color: #ffffff;
-    --headbar-font-family: "Poppins", sans-serif;  
-    --headbar-font-weight: 400;
-    --headbar-font-size: calc(var(--font-size) * 1.5);
+    --header-background-color: linear-gradient(180deg, #1e1f4293 0%, #1d1c1c5b 100%);
+    --header-text-color: #ffffff;
+    --header-font-family: "Poppins", sans-serif;  
+    --header-font-weight: 400;
+    --header-font-size: calc(var(--font-size) * 1.5);
 
     --title-font-size: calc(var(--font-size) * 1.2);
-  
+    --title-font-color: #ffffffbe;
 
     --icon-height: 1.6rem;
   }
@@ -36,7 +37,7 @@
 
   .container {
     background-color: var(--body-color);
-    font-family: var(--headbar-font-family);
+    font-family: var(--font-family);
     min-width: 400px;
     max-width: 1400px;
 
@@ -60,22 +61,24 @@
   }
   
   .header {
-    background-image: var(--headbar-color);
-    color: var(--headbar-text-color);
-    font-weight: var(--headbar-font-weight);
-    font-size: var(--headbar-font-size);
+    background-image: var(--header-background-color);
+    color: var(--header-text-color);
+    font-weight: var(--header-font-weight);
+    font-size: var(--header-font-size);
     margin: 0;
   }
   
   .header__title { 
     border: var(--border-width) solid var(--div-border-color);
-    font-size: var(--headbar-font-size);
+    font-size: var(--header-font-size);
+    color: var(--header-font-color);
     margin: 0;
   }
 
   .main__title{
     width: 90vw;
     font-size: calc(var(--font-size) * 2);
+    color: var(--title-font-color);
     text-transform: uppercase;
   }
   
@@ -98,8 +101,9 @@
   
   .skills__title { 
     width: 100%;
-    border-bottom: var(--border-width) solid var(--div-border-color);
+    border-bottom: var(--border-width) solid var(--title-font-color);
     font-size: var(--title-font-size);
+    color: var(--title-font-color);
     text-transform: uppercase;
     padding: 0 1rem;
    }
@@ -127,8 +131,9 @@
 
   .main__about__title {
     width: 100%;
-    border-bottom: var(--border-width) solid var(--div-border-color);
+    border-bottom: var(--border-width) solid var(--title-font-color);
     font-size: var(--title-font-size);
+    color: var(--title-font-color);
     text-transform: uppercase;
     padding: 0 1rem;
   }
