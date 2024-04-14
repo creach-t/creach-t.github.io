@@ -19,7 +19,7 @@
 
   --header-background-color: linear-gradient(180deg, #1e1f4293 0%, #1d1c1c5b 100%);
   --header-text-color: var(--font-color);
-  --header-font-family: var(var(--font-family))  
+  --header-font-family: var(var(--font-family));
   --header-font-weight: 400;
   --header-font-size: calc(var(--font-size) * 1.7);
 
@@ -70,8 +70,6 @@ img{
 }
 
 .main {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   color: var(--font-color);
   font-size: var(--font-size);
@@ -80,12 +78,11 @@ img{
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  padding: 1rem;
-  padding-right: 1rem;
+
 }
   
 .main__title{
-  width: 90vw;
+  display: block;
   font-size: var(--title-font-size);
   color: var(--title-font-color);
   margin: var(--title-margin);
@@ -93,20 +90,20 @@ img{
 }
 
 .main__profil{
-  display: flex;
-  justify-content: space-between;
   padding: var(--content-padding);
-
-  background-color: var(--global-background);
   border-radius: var(--global-border-radius);
   border: var(--global-border);
 }
 
 .main__profil-description {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
+  background-color: var(--global-background);
   padding: 1em;
   border: var(--global-border);
+  border-top: 1px solid var(--title-font-color);
+  border-radius: 0 0 1em 1em;
 }
   
 .main__profil-img { 
@@ -122,8 +119,7 @@ img{
 }
   
 .skills__title { 
-  width: 100%;
-  border-bottom: var(--border-width) solid var(--title-font-color);
+  width: 90%;
   font-size: var(--title-font-size);
   color: var(--title-font-color);
   margin: var(--title-margin);
@@ -131,9 +127,8 @@ img{
 }
   
 .main__skills{
-  width: 100%;
   margin: auto;
-  background-color: var(--global-background);
+  padding: var(--content-padding);
   border-radius: var(--global-border-radius);
   border: var(--global-border);
 }
@@ -145,8 +140,11 @@ img{
   padding: var(--content-padding);
   justify-content: center;
   gap: 1rem;
+  background-color: var(--global-background);
   list-style-type: none;
   border: var(--global-border);
+  border-top: var(--border-width) solid var(--title-font-color);
+  border-radius: 0 0 1em 1em;
 }
 
 .skills__list__item {
@@ -155,20 +153,93 @@ img{
   font-size: 1.3em;
 }
 
-.main__about__title {
-  width: 100%;
-  border-bottom: var(--border-width) solid var(--title-font-color);
+.main__projects{
+  padding: var(--content-padding);
+
+}
+
+.projects__title{
   font-size: var(--title-font-size);
-  margin: var(--title-margin);
   color: var(--title-font-color);
+  margin: var(--title-margin);
+  text-transform: uppercase;
+}
+
+.projects__list{
+  display: flex;
+  justify-content: center;
+  background-color: var(--global-background);
+  border-top: var(--border-width) solid var(--title-font-color);
+  padding: var(--content-padding);
+  border-radius: 0 0 1em 1em;
+}
+
+.projects__card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid white;
+  border-radius: 1em;
+  width: 20em;
+  height: 20em;
+  padding: 0.5em;
+}
+
+.card__title{
+  font-size: var(--title-font-size);
+  color: var(--title-font-color);
+  text-align: center;
+  margin: var(--title-margin);
+  text-transform: uppercase;
+}
+
+.card__paragraphe{
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.card__link{
+  display: block;
+  text-align: center;
+  font-size: 0.9em;
+  border-radius: 1em;
+  font-weight: 800;
+  color: var(--body-color);
+  background-color: var(--title-font-color);
+  margin: var(--title-margin);
+  padding: 0.5em;
+  text-transform: uppercase;
+  text-shadow: none;
+  border: 2px solid var(--title-font-color);
+}
+
+.card__link:hover{
+  border: 2px solid var(--title-font-color);
+  color: var(--title-font-color);
+  background-color: var(--body-color);
+  text-decoration: none;
+}
+
+.main__about__title {
+  display: block;
+  width: 90%;
+  font-size: var(--title-font-size);
+  color: var(--title-font-color);
+  margin: var(--title-margin);
   text-transform: uppercase;
 }
 
 .main__about {
   padding: var(--content-padding);
-  background-color: var(--global-background);
   border-radius: var(--global-border-radius);
   border: var(--global-border);
+  }
+
+  .about__paragraphe{
+    background-color: var(--global-background);
+    padding: var(--content-padding);
+    border-top: var(--border-width) solid var(--title-font-color);
+    border-radius: 0 0 1em 1em;
   }
 
 .embed {
@@ -255,7 +326,8 @@ img{
 
 @media screen and (max-width: 600px) {
 :root{
-  --content-padding: 0rem;
+  --font-size: 0.9rem;
+  --content-padding: 0.2rem;
 
 }
 
