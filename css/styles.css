@@ -178,9 +178,9 @@ img{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  background-image: linear-gradient(to bottom, #434343 0%, rgb(26, 25, 25) 100%);
   border-radius: 1em;
-  width: 20em;
+  width: 16em;
   padding: 0.5em;
 }
 
