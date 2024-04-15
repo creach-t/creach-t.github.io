@@ -178,7 +178,8 @@ img{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: linear-gradient(to bottom, #434343 0%, rgb(26, 25, 25) 100%);
+  background-image: linear-gradient(to bottom, #434343c2 0%, #242222b0 100%);
+  border: 1px solid #ffffff52;
   border-radius: 1em;
   width: 16em;
   padding: 0.5em;
