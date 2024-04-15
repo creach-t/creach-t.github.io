@@ -178,11 +178,34 @@ img{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid white;
+  background-color: #ffffff71;
   border-radius: 1em;
   width: 20em;
   height: 20em;
   padding: 0.5em;
+}
+
+.tags{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tag{
+  font-size: small;
+  font-weight: bold;
+  background-color: var(--title-font-color);
+  border-radius: 0.5em;
+  padding: 0.5em;
+  margin-right: 0.3em;
+  text-shadow: none;
+}
+
+.tag--html{
+  background-color: #c97303;
+}
+
+.tag--css{
+  background-color: #00006b;
 }
 
 .card__title{
@@ -321,13 +344,12 @@ img{
 @media screen and (max-width: 980px) {
 
 
-
 }
 
 @media screen and (max-width: 600px) {
 :root{
   --font-size: 0.9rem;
-  --content-padding: 0.2rem;
+  --content-padding: 0.6rem;
 
 }
 
