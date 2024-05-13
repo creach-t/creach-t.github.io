@@ -125,10 +125,6 @@ section {
   padding-top: var(--header-height);
 }
 
-section:last-child {
-  height: calc(100vh - var(--header-height));
-}
-
 .burger__menu {
   display: none;
   cursor: pointer;
