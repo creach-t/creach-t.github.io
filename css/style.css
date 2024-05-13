@@ -509,6 +509,7 @@ section:last-child {
 }
 
 footer {
+  display: block;
   background-color: var(--element-color);
   padding: 1rem;
   margin: 1rem;
