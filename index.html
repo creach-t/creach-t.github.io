@@ -2,88 +2,141 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Théo Créac'h, développeur Full Stack en formation.">
-  <meta name="keywords"
-    content="Théo Créac'h, Portfolio, Développeur Full Stack, React, Node.js, JavaScript, HTML, CSS, MySQL, PHP, WordPress">
-  <meta name="author" content="Théo Créac'h">
-  <title>Portfolio d'un développeur Full Stack passionné | CREAC'H THÉO </title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-  </style>
-  <link rel="stylesheet" href="css/reboot.css">
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créac'h Théo - Portfolio</title>
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+    <script src="https://kit.fontawesome.com/39f2b6dac1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
-  <div class="container">
-
     <header class="header">
-      <h1 class="header__title">&lt;creach-t&gt;</h1>
-      <div class="header__menu"></div>
+        <h1 class="header__title title"><img class="logo" src="img/tree-logo.svg" alt="logo">CREACH-T</h1>
+        <nav>
+            <label class="burger__menu">☰</label>
+            <ul class="header__nav">
+                <a href="#aboutme"><li class="header__nav__item header__nav__item--first">about-me</li></a>
+                <a href="#specializations"><li class="header__nav__item">specializations</li></a>
+                <a href="#projects"><li class="header__nav__item">projects</li></a>
+                <a href="#contacts"><li class="header__nav__item">contacts</li></a>
+                <li id="darkMode" class="header__nav__item"> 
+                    <svg width="30" height="30" id="light-icon">
+                      <circle cx="15" cy="15" r="6" fill="currentColor" />
+              
+                      <line
+                        id="ray"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        x1="15"
+                        y1="1"
+                        x2="15"
+                        y2="4"
+                      ></line>
+              
+                      <use href="#ray" transform="rotate(45 15 15)" />
+                      <use href="#ray" transform="rotate(90 15 15)" />
+                      <use href="#ray" transform="rotate(135 15 15)" />
+                      <use href="#ray" transform="rotate(180 15 15)" />
+                      <use href="#ray" transform="rotate(225 15 15)" />
+                      <use href="#ray" transform="rotate(270 15 15)" />
+                      <use href="#ray" transform="rotate(315 15 15)" />
+                    </svg>
+                    <svg width="30" height="30" id="dark-icon">
+                      <path
+                        fill="currentColor"
+                        d="
+                        M 23, 5
+                        A 12 12 0 1 0 23, 25
+                        A 12 12 0 0 1 23, 5"
+                      />
+                    </svg>
+                </li>
+            </ul>
+        </nav>
     </header>
-
     <main class="main">
-
-
-      <div class="main__profil">
-        <h2 class="main__title">Créac'h Théo</h2>
-        <div class="main__profil-description">
-          <img class="main__profil-img" src="./images/profile-pic.png" alt="profil_picture">
-          <p>
-            Welcome to my <em class="embed">&lt;developer&gt;</em> Portfolio,
-            i'm Créac'h Théo and i try to make things work well. <br>
-            I'm a <em class="embed">&lt;Full Stack Developer&gt;</em> in formation and I'm always looking for new
-            challenges.
-          </p>
-        </div>
-      </div>
-
-      <div class="main__skills">
-        <h3 class="skills__title">My Skills</h3>
-        <ul class="skills__list">
-          <li class="skills__list__item skills__list__item--react">REACT</li>
-          <li class="skills__list__item skills__list__item--nodejs">Node.JS</li>
-          <li class="skills__list__item skills__list__item--js">Javascript</li>
-          <li class="skills__list__item skills__list__item--html">HTML</li>
-          <li class="skills__list__item skills__list__item--css">CSS</li>
-          <li class="skills__list__item skills__list__item--mysql">MySQL</li>
-          <li class="skills__list__item skills__list__item--php">PHP</li>
-          <li class="skills__list__item skills__list__item--wordpress">Wordpress</li>
-        </ul>
-      </div>
-
-      <div class="main__projects">
-        <h3 class="projects__title">My Projects</h3>
-        <div class="projects__list">
-          <div class="projects__card">
-            <div class="tags">
-              <div class="tag tag--html">HTML</div>
-              <div class="tag tag--css">CSS</div>
+        <section id="aboutme">
+            <div id="header-image" alt="">
+                <h1>Créac'h Théo</h1>
+                <h2>Developer web Fullstack</h2>
             </div>
-            <h4 class="card__title">Heros League Project</h4>
-            <img class="card__img" src="./images/miniature-heros-league.PNG" alt="">
-            <p class="card__paragraphe">First Professional-Level Front-End Project</p>
-            <a href="https://o-clock-pancakes.github.io/exo-bonus-heros-league-creach-t/" class="card__link" target="_blank">Check project</a>
-          </div>
-        </div>
-      </div>
+            <img id="picture-profile" src="img/picture profile flat.svg" alt="">
+            <h3>Welcome to my developer portfolio!</h3>
+            <p>
+                🌟 I'm Créac'h Théo, where precision meets curiosity and adaptability. <br>
+                💻 As a budding Full Stack Developer, I thrive on challenges that fuel my insatiable appetite for learning
+                and
+                drive to excel.<br>
+                🚀 Join me on a journey where every line of code is crafted with meticulous attention, every problem is a
+                puzzle waiting to be solved, and every project is an opportunity to innovate and adapt.<br>
+                🔍 Let's create excellence together.
+            </p>
+            
+        </section>
+        <section id="specializations">
+            <h3 class="section__title">Specializations</h3>
+            <h4 class="section__subtitle">i would like to work with</h4>
+            <ul class="specializations__list">
+                <li class="specializations__item"><i class="fa-brands fa-html5"></i>HTML</li>
+                <li class="specializations__item"><i class="fa-brands fa-css3-alt"></i>CSS</li>
+                <li class="specializations__item "><i class="fa-brands fa-js"></i>Javascript</li>
 
-      <div class="main__about">
-        <h3 class="main__about__title">about me</h3>
-        <p class="about__paragraphe">I'm Théo Créac'h, a dynamic and proactive individual transitioning from commerce to
-          web development. My previous experience in commerce has equipped me with skills that I now apply to my passion
-          for web development. My enthusiasm and quick learning ability enable me to confidently take on the challenges
-          of this new career. Currently, I'm enhancing my skills in React, JavaScript, Node.js, MySQL, HTML and CSS I'm
-          also working on several personal development projects and a tutored professional project as part of my ongoing
-          training. I bring energy, autonomy, meticulousness, and strong interpersonal skills to all my endeavors.</p>
-      </div>
-
+                <li class="specializations__item"><i class="fa-brands fa-php"></i>PHP</li>
+                <li class="specializations__item"><i class="fa-solid fa-database"></i>SQL</li>
+                <li class="specializations__item specializations__item--learn"><i class="fa-brands fa-node-js"></i>NodeJS</li>
+                <li class="specializations__item specializations__item--learn"><i class="fa-brands fa-git-alt"></i>Git</li>
+                <li class="specializations__item specializations__item--learn"><i class="fa-brands fa-react"></i>React</li>
+            </ul>
+            <p>*but I'm always excited to dive into new technologies and expand my skill set! 😉</p>
+        </section>
+        <section id="projects">
+            <h3 class="section__title">Projects</h3>
+            <h4 class="section__subtitle"> that i've worked on</h4>
+            <div class="projects__list">
+                <div class="projects__card">
+                    <div class="tags">
+                        <div class="tag tag--html">HTML</div>
+                        <div class="tag tag--css">CSS</div>
+                    </div>
+                    <h5 class="card__title">Heros League Project</h5>
+                    <img class="card__img" src="./img/miniature-heros-league.PNG" alt="">
+                    <p class="card__paragraphe">First Professional-Level Front-End Project</p>
+                    <a href="https://o-clock-pancakes.github.io/exo-bonus-heros-league-creach-t/" class="card__link"
+                        target="_blank">Check project</a>
+                </div>
+            </div>
+        </section>
+        <section id="contacts">
+            <h3 class="section__title">Contact</h3>
+            <h4 class="section__subtitle">let's connect</h4>
+            <ul class="social">
+                <li><a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/creachtheo" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+            <form class="form" action="https://formspree.io/f/xzbnwvvv" method="POST">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <label for="message">Message</label>
+                <textarea name="message" id="message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+            
+        </section>
     </main>
-
-  </div>
+    <footer>
+        <!-- copyright -->
+        <p>&copy; 2024 - Créac'h Théo</p>
+    </footer>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
