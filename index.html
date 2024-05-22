@@ -17,20 +17,19 @@
 
 </head>
 
-<body>
+<body class= "dark-mode">
     <header class="header">
         <h1 class="header__title title"><img class="logo" src="img/tree-logo.svg" alt="logo">CREACH-T</h1>
         <nav>
             <label class="burger__menu">☰</label>
             <ul class="header__nav">
-                <a href="#aboutme"><li class="header__nav__item header__nav__item--first">about-me</li></a>
-                <a href="#specializations"><li class="header__nav__item">specializations</li></a>
-                <a href="#projects"><li class="header__nav__item">projects</li></a>
-                <a href="#contacts"><li class="header__nav__item">contacts</li></a>
+                <a href="#aboutme"><li class="header__nav__item header__nav__item--first" data-translate="aboutme">about-me</li></a>
+                <a href="#specializations"><li class="header__nav__item" data-translate="specializations">specializations</li></a>
+                <a href="#projects"><li class="header__nav__item" data-translate="projects">projects</li></a>
+                <a href="#contacts"><li class="header__nav__item" data-translate="contacts">contacts</li></a>
                 <li id="darkMode" class="header__nav__item"> 
                     <svg width="30" height="30" id="light-icon">
                       <circle cx="15" cy="15" r="6" fill="currentColor" />
-              
                       <line
                         id="ray"
                         stroke="currentColor"
@@ -41,7 +40,6 @@
                         x2="15"
                         y2="4"
                       ></line>
-              
                       <use href="#ray" transform="rotate(45 15 15)" />
                       <use href="#ray" transform="rotate(90 15 15)" />
                       <use href="#ray" transform="rotate(135 15 15)" />
@@ -60,18 +58,19 @@
                       />
                     </svg>
                 </li>
+                <li> <div id="lang-toggle-btn" class="header__nav__item" data-translate="translate">translate</div></li>
             </ul>
         </nav>
     </header>
     <main class="main">
         <section id="aboutme">
-            <div id="header-image" alt="">
+            <div id="header-image" alt="Image-of-developer-environment">
                 <h1>Créac'h Théo</h1>
-                <h2>Developer web Fullstack</h2>
+                <h2 data-translate="subtitle">Developer web Fullstack</h2>
             </div>
             <img id="picture-profile" src="img/picture profile flat.svg" alt="">
-            <h3>Welcome to my developer portfolio!</h3>
-            <p>
+            <h3 data-translate="welcome">Welcome to my developer portfolio!</h3>
+            <p data-translate="about">
                 🌟 I'm Créac'h Théo, where precision meets curiosity and adaptability. <br>
                 💻 As a budding Full Stack Developer, I thrive on challenges that fuel my insatiable appetite for learning
                 and
@@ -83,8 +82,8 @@
             
         </section>
         <section id="specializations">
-            <h3 class="section__title">Specializations</h3>
-            <h4 class="section__subtitle">i would like to work with</h4>
+            <h3 class="section__title" data-translate="specializations">Specializations</h3>
+            <h4 class="section__subtitle" data-translate="specializations-subtitle">i would like to work with</h4>
             <ul class="specializations__list">
                 <li class="specializations__item"><i class="fa-brands fa-html5"></i>HTML</li>
                 <li class="specializations__item"><i class="fa-brands fa-css3-alt"></i>CSS</li>
@@ -96,28 +95,28 @@
                 <li class="specializations__item specializations__item--learn"><i class="fa-brands fa-git-alt"></i>Git</li>
                 <li class="specializations__item specializations__item--learn"><i class="fa-brands fa-react"></i>React</li>
             </ul>
-            <p>*but I'm always excited to dive into new technologies and expand my skill set! 😉</p>
+            <p data-translate="specializations-nb">*but I'm always excited to dive into new technologies and expand my skill set! 😉</p>
         </section>
         <section id="projects">
-            <h3 class="section__title">Projects</h3>
-            <h4 class="section__subtitle"> that i've worked on</h4>
+            <h3 class="section__title" data-translate="projects">Projects</h3>
+            <h4 class="section__subtitle"  data-translate="project-subtitle"> that i've worked on</h4>
             <div class="projects__list">
                 <div class="projects__card">
                     <div class="tags">
                         <div class="tag tag--html">HTML</div>
                         <div class="tag tag--css">CSS</div>
                     </div>
-                    <h5 class="card__title">Heros League Project</h5>
+                    <h5 class="card__title" data-translate="project-name-1">Heros League Project</h5>
                     <img class="card__img" src="./img/miniature-heros-league.PNG" alt="">
-                    <p class="card__paragraphe">First Professional-Level Front-End Project</p>
+                    <p class="card__paragraphe" data-translate="project-paragraphe-1">First Professional-Level Front-End Project</p>
                     <a href="https://o-clock-pancakes.github.io/exo-bonus-heros-league-creach-t/" class="card__link"
-                        target="_blank">Check project</a>
+                        target="_blank" data-translate="project-button">Check project</a>
                 </div>
             </div>
         </section>
         <section id="contacts">
-            <h3 class="section__title">Contact</h3>
-            <h4 class="section__subtitle">let's connect</h4>
+            <h3 class="section__title" data-translate="contact">Contact</h3>
+            <h4 class="section__subtitle"  data-translate="contact-subtitle">let's connect</h4>
             <ul class="social">
                 <li><a href="https://github.com/creach-t/" target="_blank"><i class="fa-brands fa-github"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/creachtheo" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
@@ -127,7 +126,7 @@
                 <input type="email" name="email" id="email">
                 <label for="message">Message</label>
                 <textarea name="message" id="message"></textarea>
-                <button type="submit">Send</button>
+                <button type="submit" data-translate="contact-button">Send</button>
             </form>
             
         </section>
@@ -136,7 +135,9 @@
         <!-- copyright -->
         <p>&copy; 2024 - Créac'h Théo</p>
     </footer>
+    
     <script src="./js/app.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

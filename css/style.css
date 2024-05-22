@@ -99,6 +99,10 @@ a {
   z-index: 3;
 }
 
+p{
+  white-space: pre-line;
+}
+
 span{
   display: inline-block;
 }
@@ -135,7 +139,7 @@ section {
   user-select: none;
   height: 0;
   display: flex;
-  gap: 1em;
+  gap: 0.7em;
 }
 
 .header__nav__item {
@@ -143,14 +147,14 @@ section {
   display: inline;
   text-align: center;
   white-space: nowrap;
-  padding-right: 0.7em;
-  padding-left: 0.7em;
+  padding-right: 0.3em;
+  padding-left: 0.3em;
   padding-top: 0.4em;
   padding-bottom: 0.4em;
   margin-right: -0.6rem;
   font-family: "Montserrat", sans-serif;
   font-weight: var(--global-weight);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--primary-text-color);
   text-decoration: none;
   cursor: pointer;

@@ -7,32 +7,25 @@ document.addEventListener("DOMContentLoaded", function() {
     const darkIcon = document.getElementById("dark-icon");
     const darkmodeElement = document.getElementById("darkMode");
 
-    // Check if dark mode preference is stored in local storage
-    let darkMode = localStorage.getItem("darkMode") === "true";
-
     // Function to toggle dark mode
     function toggleDarkMode() {
-        // Toggle darkMode variable
-        darkMode = !darkMode;
-
         // Toggle dark-mode class on body
         document.body.classList.toggle("dark-mode");
 
         // Toggle light and dark icons
-        if (darkMode) {
+        if (document.body.classList.contains("dark-mode")) {
             lightIcon.style.display = "block";
             darkIcon.style.display = "none";
+            localStorage.setItem("darkMode", true);
         } else {
             lightIcon.style.display = "none";
             darkIcon.style.display = "block";
+            localStorage.setItem("darkMode", false);
         }
-
-        // Store dark mode preference in local storage
-        localStorage.setItem("darkMode", darkMode);
     }
 
-    // Set dark-mode class on body if darkMode is true
-    if (darkMode) {
+    // Check if dark mode preference is stored in local storage
+    if (localStorage.getItem("darkMode") === "true") {
         document.body.classList.add("dark-mode");
         darkIcon.style.display = "none";
     } else {
@@ -42,11 +35,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Écouteur d'événement pour le clic sur le menu burger
     burgerMenu.addEventListener('click', function() {
         // Bascule la classe 'open' pour afficher ou masquer le menu
-        
         headerNav.classList.toggle('open');
-        if(headerNav.classList.contains('open')) {
-            burgerMenu.textContent = "✕";            
-        }else{
+        if (headerNav.classList.contains('open')) {
+            burgerMenu.textContent = "✕";
+        } else {
             burgerMenu.textContent = "☰";
         }
     });
@@ -65,20 +57,35 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Sélection des titres de section
-    const sectionTitles = document.querySelectorAll('.section__title');
+    // Chargement des données de traduction
+    let lang = localStorage.getItem("lang") || 'en'; // Langue par défaut
+    const translateElements = document.querySelectorAll('[data-translate]');
 
-    // function checkScroll() {
-    //     // Ajout et suppression de la classe 'animate' pour chaque titre de section
-    //     sectionTitles.forEach(title => {
-    //         title.classList.add('animate');
-    //         setTimeout(() => {
-    //             title.classList.remove('animate');
-    //         }, 500); 
-    //     });
-    // }
+    function loadTranslations(language) {
+        fetch(`../data/translations_${language}.json`)
+            .then(response => response.json())
+            .then(data => {
+                // Remplacement du texte dans la page HTML avec les traductions
+                translateElements.forEach(element => {
+                    const key = element.getAttribute('data-translate');
+                    if (data[key]) {
+                        element.innerHTML = data[key];
+                    }
+                });
+            })
+            .catch(error => console.error('Error loading translations:', error));
+    }
 
-    // // Exécute checkScroll à chaque fois que la page est défilée
-    // window.addEventListener('scroll', checkScroll);
+    // Charger les traductions au chargement de la page
+    loadTranslations(lang);
 
+    // Écouter le clic sur le bouton de changement de langue
+    const langButton = document.getElementById('lang-toggle-btn');
+    langButton.addEventListener('click', function() {
+        // Basculez entre les langues
+        lang = lang === 'en' ? 'fr' : 'en';
+        localStorage.setItem("lang", lang); // Enregistrer la langue sélectionnée dans le localStorage
+        // Charger les traductions pour la nouvelle langue
+        loadTranslations(lang);
+    });
 });
