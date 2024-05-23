@@ -538,7 +538,9 @@ section {
 }
 
 footer {
-  display: block;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
   background-color: var(--element-color);
   padding: 1rem;
   margin: 1rem;
