@@ -1,71 +1,63 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Sélection des éléments du menu burger
+document.addEventListener("DOMContentLoaded", function () {
+    // Sélection des éléments nécessaires
     const burgerMenu = document.querySelector('.burger__menu');
     const headerNav = document.querySelector('.header__nav');
     const navLinks = document.querySelectorAll('.header__nav__item');
     const lightIcon = document.getElementById("light-icon");
     const darkIcon = document.getElementById("dark-icon");
     const darkmodeElement = document.getElementById("darkMode");
-
-    // Function to toggle dark mode
-    function toggleDarkMode() {
-        // Toggle dark-mode class on body
-        document.body.classList.toggle("dark-mode");
-
-        // Toggle light and dark icons
-        if (document.body.classList.contains("dark-mode")) {
-            lightIcon.style.display = "block";
-            darkIcon.style.display = "none";
-            localStorage.setItem("darkMode", true);
-        } else {
-            lightIcon.style.display = "none";
-            darkIcon.style.display = "block";
-            localStorage.setItem("darkMode", false);
-        }
-    }
-
-    // Check if dark mode preference is stored in local storage
-    if (localStorage.getItem("darkMode") === "true") {
-        document.body.classList.add("dark-mode");
-        darkIcon.style.display = "none";
-    } else {
-        lightIcon.style.display = "none";
-    }
-
-    // Écouteur d'événement pour le clic sur le menu burger
-    burgerMenu.addEventListener('click', function() {
-        // Bascule la classe 'open' pour afficher ou masquer le menu
-        headerNav.classList.toggle('open');
-        if (headerNav.classList.contains('open')) {
-            burgerMenu.textContent = "✕";
-        } else {
-            burgerMenu.textContent = "☰";
-        }
-    });
-
-    darkmodeElement.addEventListener('click', function() {
-        // Bascule le mode sombre
-        toggleDarkMode();
-    });
-
-    // Ajout d'un gestionnaire d'événements de clic à chaque lien du menu burger
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            // Ferme le menu burger en supprimant la classe 'open'
-            headerNav.classList.remove('open');
-            burgerMenu.textContent = "☰";
-        });
-    });
-
-    // Chargement des données de traduction
-    let lang = localStorage.getItem("lang") || 'en'; // Langue par défaut
+    const langButton = document.getElementById('lang-toggle-btn');
     const translateElements = document.querySelectorAll('[data-translate]');
+    
+    // Vérification de l'existence des éléments
+    if (!burgerMenu || !headerNav || !lightIcon || !darkIcon || !darkmodeElement || !langButton) {
+        console.error("Un ou plusieurs éléments nécessaires sont manquants dans le HTML.");
+        return;
+    }
+
+    // Gestion du Dark Mode
+    function toggleDarkMode() {
+        const isDarkMode = document.body.classList.toggle("dark-mode");
+        lightIcon.style.display = isDarkMode ? "block" : "none";
+        darkIcon.style.display = isDarkMode ? "none" : "block";
+        localStorage.setItem("darkMode", isDarkMode);
+    }
+
+    function loadDarkModePreference() {
+        const darkModePreference = localStorage.getItem("darkMode") === "true";
+        document.body.classList.toggle("dark-mode", darkModePreference);
+        lightIcon.style.display = darkModePreference ? "block" : "none";
+        darkIcon.style.display = darkModePreference ? "none" : "block";
+    }
+
+    loadDarkModePreference();
+
+    darkmodeElement.addEventListener('click', toggleDarkMode);
+
+    // Gestion du menu burger
+    function toggleBurgerMenu() {
+        const isOpen = headerNav.classList.toggle('open');
+        burgerMenu.textContent = isOpen ? "✕" : "☰";
+    }
+
+    burgerMenu.addEventListener('click', toggleBurgerMenu);
+
+    navLinks.forEach((link, index) => {
+        if (index < navLinks.length - 2) {
+            link.addEventListener('click', () => {
+                headerNav.classList.remove('open');
+                burgerMenu.textContent = "☰";
+            });
+        }
+    });
+
+    // Gestion des traductions
+    let lang = localStorage.getItem("lang") || 'en';
 
     function loadTranslations(language) {
         fetch(`../data/translations_${language}.json`)
             .then(response => response.json())
             .then(data => {
-                // Remplacement du texte dans la page HTML avec les traductions
                 translateElements.forEach(element => {
                     const key = element.getAttribute('data-translate');
                     if (data[key]) {
@@ -73,19 +65,14 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 });
             })
-            .catch(error => console.error('Error loading translations:', error));
+            .catch(error => console.error('Erreur lors du chargement des traductions :', error));
     }
 
-    // Charger les traductions au chargement de la page
     loadTranslations(lang);
 
-    // Écouter le clic sur le bouton de changement de langue
-    const langButton = document.getElementById('lang-toggle-btn');
-    langButton.addEventListener('click', function() {
-        // Basculez entre les langues
+    langButton.addEventListener('click', function () {
         lang = lang === 'en' ? 'fr' : 'en';
-        localStorage.setItem("lang", lang); // Enregistrer la langue sélectionnée dans le localStorage
-        // Charger les traductions pour la nouvelle langue
+        localStorage.setItem("lang", lang);
         loadTranslations(lang);
     });
 });
