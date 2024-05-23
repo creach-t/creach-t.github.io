@@ -1,8 +1,8 @@
 {
-    "aboutme": "About Me",
-    "specializations": "Specializations",
-    "projects": "Projects",
-    "contacts": "Contacts",
+    "aboutme": "<a href='#aboutme'>about-me</a>",
+    "specializations": "<a href='#specializations'>specializations</a>",
+    "projects": "<a href='#projects'>projects</a>",
+    "contacts": "<a href='#contacts'>contact</a>",
     "translate": "&#x1f1eb;&#x1f1f7;",
     "subtitle": "Developer Fullstack",
     "welcome": "Welcome to my developer portfolio!",

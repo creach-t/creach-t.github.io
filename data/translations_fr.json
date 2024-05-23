@@ -1,8 +1,8 @@
 {
-    "aboutme": "À propos de moi",
-    "specializations": "Spécialisations",
-    "projects": "Projets",
-    "contacts": "Contacts",
+    "aboutme": "<a href='#aboutme'>à mon propos</a>",
+    "specializations": "<a href='#specializations'>spécialisations</a>",
+    "projects": "<a href='#projects'>projets</a>",
+    "contacts": "<a href='#contacts'>contacts</a>",
     "translate": "&#x1f1ec;&#x1f1e7;",
     "subtitle": "Développeur Fullstack",
     "welcome": "Bienvenue sur mon portfolio de développeur!",

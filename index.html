@@ -23,48 +23,18 @@
         <nav>
             <label class="burger__menu">☰</label>
             <ul class="header__nav">
-                <a href="#aboutme"><li class="header__nav__item header__nav__item--first" data-translate="aboutme">about-me</li></a>
-                <a href="#specializations"><li class="header__nav__item" data-translate="specializations">specializations</li></a>
-                <a href="#projects"><li class="header__nav__item" data-translate="projects">projects</li></a>
-                <a href="#contacts"><li class="header__nav__item" data-translate="contacts">contacts</li></a>
-                <li id="darkMode" class="header__nav__item"> 
-                    <svg width="30" height="30" id="light-icon">
-                      <circle cx="15" cy="15" r="6" fill="currentColor" />
-                      <line
-                        id="ray"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        x1="15"
-                        y1="1"
-                        x2="15"
-                        y2="4"
-                      ></line>
-                      <use href="#ray" transform="rotate(45 15 15)" />
-                      <use href="#ray" transform="rotate(90 15 15)" />
-                      <use href="#ray" transform="rotate(135 15 15)" />
-                      <use href="#ray" transform="rotate(180 15 15)" />
-                      <use href="#ray" transform="rotate(225 15 15)" />
-                      <use href="#ray" transform="rotate(270 15 15)" />
-                      <use href="#ray" transform="rotate(315 15 15)" />
-                    </svg>
-                    <svg width="30" height="30" id="dark-icon">
-                      <path
-                        fill="currentColor"
-                        d="
-                        M 23, 5
-                        A 12 12 0 1 0 23, 25
-                        A 12 12 0 0 1 23, 5"
-                      />
-                    </svg>
-                </li>
-                <li> <div id="lang-toggle-btn" class="header__nav__item" data-translate="translate">translate</div></li>
+                <li class="header__nav__item header__nav__item--first" data-translate="aboutme"><a href="#aboutme">about-me</a></li>
+                <li class="header__nav__item" data-translate="specializations"><a href="#specializations">specializations</a></li>
+                <li class="header__nav__item" data-translate="projects"> <a href="#projects">projects</a></li>
+                <li class="header__nav__item" data-translate="contacts"><a href="#contacts">contacts</a></li>
+                <li id="darkMode" class="header__nav__item"><i id="light-icon" class="fa-solid fa-sun"></i><i id="dark-icon" class="fa-solid fa-moon"></i></li>
+                <li  class="header__nav__item" ><div id="lang-toggle-btn" data-translate="translate">translate</div></li>
             </ul>
         </nav>
     </header>
     <main class="main">
         <section id="aboutme">
-            <div id="header-image" alt="Image-of-developer-environment">
+            <div id="header-image">
                 <h1>Créac'h Théo</h1>
                 <h2 data-translate="subtitle">Developer web Fullstack</h2>
             </div>
@@ -115,7 +85,7 @@
             </div>
         </section>
         <section id="contacts">
-            <h3 class="section__title" data-translate="contact">Contact</h3>
+            <h3 class="section__title" data-translate="contacts">Contact</h3>
             <h4 class="section__subtitle"  data-translate="contact-subtitle">let's connect</h4>
             <ul class="social">
                 <li><a href="https://github.com/creach-t/" target="_blank"><i class="fa-brands fa-github"></i></a></li>
