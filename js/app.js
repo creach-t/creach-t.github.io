@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const darkmodeElement = document.getElementById("darkMode");
     const langButton = document.getElementById('lang-toggle-btn');
     const translateElements = document.querySelectorAll('[data-translate]');
-    
+
     // Vérification de l'existence des éléments
     if (!burgerMenu || !headerNav || !lightIcon || !darkIcon || !darkmodeElement || !langButton) {
         console.error("Un ou plusieurs éléments nécessaires sont manquants dans le HTML.");
@@ -52,7 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Gestion des traductions
-    let lang = localStorage.getItem("lang") || 'en';
+    function getBrowserLanguage() {
+        const browserLanguage = navigator.language || navigator.languages[0];
+        return browserLanguage.startsWith('fr') ? 'fr' : 'en';
+    }
+
+    let lang = localStorage.getItem("lang") || getBrowserLanguage();
 
     function loadTranslations(language) {
         fetch(`../data/translations_${language}.json`)
