@@ -9,105 +9,96 @@
     <script src="https://kit.fontawesome.com/39f2b6dac1.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
-<body class= "dark-mode">
+<body class="dark-mode">
     <header class="header">
-        <h1 class="header__title title"><img class="logo" src="img/tree-logo.svg" alt="logo du site web">CREACH-T</h1>
+        <h1 class="header__title title"><img class="logo" src="img/tree-logo.svg" alt="Logo du site web">CREACH-T</h1>
         <nav>
-            <label class="burger__menu">☰</label>
-            <ul class="header__nav">
-                <li class="header__nav__item header__nav__item--first" data-translate="aboutme"><a href="#aboutme">about-me</a></li>
-                <li class="header__nav__item" data-translate="specializations"><a href="#specializations">specializations</a></li>
-                <li class="header__nav__item" data-translate="projects"> <a href="#projects">projects</a></li>
-                <li class="header__nav__item" data-translate="contacts"><a href="#contacts">contacts</a></li>
-                <li id="darkMode" class="header__nav__item"><i id="light-icon" class="fa-solid fa-sun"></i><i id="dark-icon" class="fa-solid fa-moon"></i></li>
-                <li  class="header__nav__item" ><div id="lang-toggle-btn" data-translate="translate">translate</div></li>
+            <button class="burger__menu" aria-label="Ouvrir le menu">☰</button>
+            <ul class="header__nav" role="menu">
+                <li class="header__nav__item header__nav__item--first" data-translate="aboutme"><a href="#aboutme" role="menuitem">À propos de moi</a></li>
+                <li class="header__nav__item" data-translate="specializations"><a href="#specializations" role="menuitem">Spécialisations</a></li>
+                <li class="header__nav__item" data-translate="projects"><a href="#projects" role="menuitem">Projets</a></li>
+                <li class="header__nav__item" data-translate="contacts"><a href="#contacts" role="menuitem">Contacts</a></li>
+                <li id="darkMode" class="header__nav__item">
+                    <button id="darkModeButton" aria-label="Changer le mode sombre/clair"><i id="light-icon" class="fa-solid fa-sun"></i><i id="dark-icon" class="fa-solid fa-moon"></i></button>
+                </li>
+                <li class="header__nav__item">
+                    <button id="lang-toggle-btn" data-translate="translate" aria-label="Changer la langue">Translate</button>
+                </li>
             </ul>
         </nav>
     </header>
     <main class="main">
-        <section id="aboutme">
+        <section id="aboutme" role="region" aria-labelledby="aboutme-heading">
             <div id="header-image">
-                <h1>Créac'h Théo</h1>
-                <h2 data-translate="subtitle">Developer web Fullstack</h2>
+                <h1 id="aboutme-heading">Créac'h Théo</h1>
+                <h2 data-translate="subtitle">Développeur web Fullstack</h2>
             </div>
-            <img id="picture-profile" src="img/picture profile flat.svg" alt="image de profile en flat-design de Créac'h Théo">
-            <h3 data-translate="welcome">Welcome to my developer portfolio!</h3>
+            <img id="picture-profile" src="img/picture profile flat.svg" alt="Image de profil en flat-design de Créac'h Théo">
+            <h3 data-translate="welcome">Bienvenue sur mon portfolio de développeur !</h3>
             <p data-translate="about">
-                🌟 I'm Créac'h Théo, where precision meets curiosity and adaptability. <br>
-                💻 As a budding Full Stack Developer, I thrive on challenges that fuel my insatiable appetite for learning
-                and
-                drive to excel.<br>
-                🚀 Join me on a journey where every line of code is crafted with meticulous attention, every problem is a
-                puzzle waiting to be solved, and every project is an opportunity to innovate and adapt.<br>
-                🔍 Let's create excellence together.
+                🌟 Je suis Créac'h Théo, où la précision rencontre la curiosité et l'adaptabilité. <br>
+                💻 En tant que développeur Full Stack en herbe, je prospère grâce aux défis qui alimentent mon insatiable appétit pour l'apprentissage et mon désir d'exceller. <br>
+                🚀 Rejoignez-moi dans un voyage où chaque ligne de code est élaborée avec une attention méticuleuse, chaque problème est un puzzle à résoudre, et chaque projet est une opportunité d'innover et de s'adapter. <br>
+                🔍 Créons l'excellence ensemble.
             </p>
-            
         </section>
-        <section id="specializations">
-            <h3 class="section__title" data-translate="specializations">Specializations</h3>
-            <h4 class="section__subtitle" data-translate="specializations-subtitle">i would like to work with</h4>
+        <section id="specializations" role="region" aria-labelledby="specializations-heading">
+            <h3 id="specializations-heading" class="section__title" data-translate="specializations">Spécialisations</h3>
+            <h4 class="section__subtitle" data-translate="specializations-subtitle">Je souhaite travailler avec</h4>
             <ul class="specializations__list">
-                <li class="specializations__item"><i class="fa-brands fa-html5"></i>HTML</li>
-                <li class="specializations__item"><i class="fa-brands fa-css3-alt"></i>CSS</li>
-                <li class="specializations__item "><i class="fa-brands fa-js"></i>Javascript</li>
-
-                <li class="specializations__item"><i class="fa-brands fa-php"></i>PHP</li>
-                <li class="specializations__item"><i class="fa-solid fa-database"></i>SQL</li>
-                <li class="specializations__item specializations__item--learn"><i class="fa-brands fa-node-js"></i>NodeJS</li>
-                <li class="specializations__item specializations__item--learn"><i class="fa-brands fa-git-alt"></i>Git</li>
-                <li class="specializations__item specializations__item--learn"><i class="fa-brands fa-react"></i>React</li>
+                <li class="specializations__item"><i class="fa-brands fa-html5" aria-hidden="true"></i>HTML</li>
+                <li class="specializations__item"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i>CSS</li>
+                <li class="specializations__item"><i class="fa-brands fa-js" aria-hidden="true"></i>Javascript</li>
+                <li class="specializations__item"><i class="fa-brands fa-php" aria-hidden="true"></i>PHP</li>
+                <li class="specializations__item"><i class="fa-solid fa-database" aria-hidden="true"></i>SQL</li>
+                <li class="specializations__item specializations__item--learn"><i class="fa-brands fa-node-js" aria-hidden="true"></i>NodeJS</li>
+                <li class="specializations__item specializations__item--learn"><i class="fa-brands fa-git-alt" aria-hidden="true"></i>Git</li>
+                <li class="specializations__item specializations__item--learn"><i class="fa-brands fa-react" aria-hidden="true"></i>React</li>
             </ul>
-            <p data-translate="specializations-nb">*but I'm always excited to dive into new technologies and expand my skill set! 😉</p>
+            <p data-translate="specializations-nb">*mais je suis toujours excité de plonger dans de nouvelles technologies et d'élargir mes compétences ! 😉</p>
         </section>
-        <section id="projects">
-            <h3 class="section__title" data-translate="projects">Projects</h3>
-            <h4 class="section__subtitle"  data-translate="project-subtitle"> that i've worked on</h4>
+        <section id="projects" role="region" aria-labelledby="projects-heading">
+            <h3 id="projects-heading" class="section__title" data-translate="projects">Projets</h3>
+            <h4 class="section__subtitle" data-translate="project-subtitle">Sur lesquels j'ai travaillé</h4>
             <div class="projects__list">
                 <div class="projects__card">
                     <div class="tags">
                         <div class="tag tag--html">HTML</div>
                         <div class="tag tag--css">CSS</div>
                     </div>
-                    <h5 class="card__title" data-translate="project-name-1">Heros League Project</h5>
-                    <img class="card__img" src="./img/miniature-heros-league.PNG" alt="miniature d'un projet front-end">
-                    <p class="card__paragraphe" data-translate="project-paragraphe-1">First Professional-Level Front-End Project</p>
-                    <a href="https://o-clock-pancakes.github.io/exo-bonus-heros-league-creach-t/" class="card__link"
-                        target="_blank" data-translate="project-button">Check project</a>
+                    <h5 class="card__title" data-translate="project-name-1">Projet Heros League</h5>
+                    <img class="card__img" src="./img/miniature-heros-league.PNG" alt="Miniature d'un projet front-end">
+                    <p class="card__paragraphe" data-translate="project-paragraphe-1">Premier projet front-end de niveau professionnel</p>
+                    <a href="https://o-clock-pancakes.github.io/exo-bonus-heros-league-creach-t/" class="card__link" target="_blank" data-translate="project-button">Voir le projet</a>
                 </div>
             </div>
         </section>
-        <section id="contacts">
-            <h3 class="section__title" data-translate="contacts">Contact</h3>
-            <h4 class="section__subtitle"  data-translate="contact-subtitle">let's connect</h4>
+        <section id="contacts" role="region" aria-labelledby="contacts-heading">
+            <h3 id="contacts-heading" class="section__title" data-translate="contacts">Contact</h3>
+            <h4 class="section__subtitle" data-translate="contact-subtitle">Entrons en contact</h4>
             <ul class="social">
-                <li><a href="https://github.com/creach-t/" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/creachtheo" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/creach-t/" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/creachtheo" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
             </ul>
             <form class="form" action="https://formspree.io/f/xzbnwvvv" method="POST">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" required aria-required="true">
                 <label for="message">Message</label>
-                <textarea name="message" id="message"></textarea>
-                <button type="submit" data-translate="contact-button">Send</button>
+                <textarea name="message" id="message" required aria-required="true"></textarea>
+                <button type="submit" data-translate="contact-button">Envoyer</button>
             </form>
-            
         </section>
     </main>
-    <footer>
-        <!-- copyright -->
+    <footer role="contentinfo">
         <p>&copy; 2024 - Créac'h Théo</p>
     </footer>
-    
     <script src="./js/app.js"></script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
