@@ -17,7 +17,7 @@
   --header-image-gradient3: rgba(255, 255, 255, 0.815);
   --header-image-gradient-blend-mode: lighten;
   --global-weight: 400;
-  --picture-profile-background-url: url(../img/leaf-pattern-grey.svg);
+  --picture-profile-background-url: url(../img/leaf_pattern_grey.svg);
   --form-input-color: rgb(255, 255, 255);
   --border-top-burger-color: rgba(0, 0, 0, 0.233);
 }
@@ -38,7 +38,7 @@
   --header-image-gradient3: var(--color-primary);
   --header-image-gradient-blend-mode: darken;
   --global-weight: 300;
-  --picture-profile-background-url: url(../img/leaf-pattern-white.svg);
+  --picture-profile-background-url: url(../img/leaf_pattern_white.svg);
   --form-input-color: rgba(255, 255, 255, 0.514);
   --border-top-burger-color: rgba(255, 255, 255, 0.055);
 }
@@ -202,7 +202,6 @@ section {
 
 
 #aboutme {
-  /* background-image: url(../img/developer-environement.svg), linear-gradient(rgba(0, 0, 0, 0.062), rgba(0, 0, 0, 0.9)); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -217,7 +216,7 @@ section {
 }
 
 #header-image {
-  background-image: url(../img/developer-environement.svg), linear-gradient(to bottom, var(--header-image-gradient1), var(--header-image-gradient2), var(--header-image-gradient3));
+  background-image: url(../img/developer_environement.svg), linear-gradient(to bottom, var(--header-image-gradient1), var(--header-image-gradient2), var(--header-image-gradient3));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -233,15 +232,15 @@ section {
   text-shadow: 1px 1px 2px black, 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
 }
 
-#header-image h1 {
+#header-image h2 {
   padding-bottom: 0.3rem;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
   letter-spacing: 1px;
 }
 
-#header-image h2 {
+#header-image h3 {
   text-transform: uppercase;
   font-size: 1.4em;
   font-weight: 600;
@@ -263,7 +262,7 @@ section {
 
 }
 
-#aboutme h3 {
+#welcome {
   margin-top: -1rem;
   font-size: 2.5em;
   font-weight: 600;
@@ -313,7 +312,7 @@ section {
 .section__title::before {
   position: relative;
   content: " ";
-  background: url(../img/a-unique-green-leaf-in-movement-without-background.svg);
+  background: url(../img/leaf.svg);
   background-size: 120% 120%;
   width: 4.5rem;
   height: 4.5rem;
@@ -600,6 +599,9 @@ footer {
     font-size: 1.4rem;
   }
 
+  #welcome {
+    font-size: 2rem;
+  }
 
   .header__nav {
     gap: 0rem;
@@ -653,19 +655,22 @@ footer {
 
 @media only screen and (max-width: 800px) {
 
-  #header-image h1 {
-    font-size: 3rem;
+  #welcome {
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+  }
+
+  #header-image h2 {
+    font-size: 2.5rem;
+  }
+
+
+  #header-image h3 {
+    font-size: 1rem;
   }
 
   #picture-profile {
     height: 10rem;
-  }
-
-  #aboutme h3 {
-    font-size: 1.5rem;
-    flex-basis: 80%;
-    text-align: center;
-    line-height: 2rem;
   }
 
   #aboutme p {
@@ -696,10 +701,6 @@ footer {
     right: 0;
     gap: 0;
     box-shadow: 0px 0px 10px 0px var(--header-shadow-color);
-
-
-
-
   }
 
   .header__nav__item {
@@ -742,8 +743,6 @@ footer {
     padding: 0.8rem 0.3rem;
   }
 
-
-
   .header__nav:hover> :not(:hover) {
     transition: opacity 0s ease-in-out;
     opacity: 1;
@@ -766,11 +765,11 @@ footer {
     padding-top: 30px;
   }
 
-  #header-image h1 {
+  #header-image h2 {
     font-size: 2rem;
   }
 
-  #header-image h2 {
+  #header-image h3 {
     font-size: 1rem;
   }
 
