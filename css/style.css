@@ -103,8 +103,8 @@ span {
 
 .textlogo{
   content:var(--logo-text-url);
-  margin-top: 1.6rem;
-  height: 2rem;
+  margin-top: 1.3rem;
+  height: 2.3rem;
 }
 
 section:not(:first-child) {
@@ -579,7 +579,9 @@ footer {
     font-size: 1.4rem;
   }
 
+
   .textlogo{
+    margin-top: 1.7rem;
     height: 1.7rem;
   }
 
