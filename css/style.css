@@ -1,6 +1,6 @@
 :root {
-  --color-primary: rgb(211, 215, 219);
-  --primary-text-color: rgb(23, 43, 63);
+  --color-primary: #d3d7db;
+  --primary-text-color: #172b3f;
   --header-height: 5rem;
   --header-shadow-color: rgb(0, 0, 0);
   --color-secondary: rgb(231, 100, 44);
@@ -18,6 +18,8 @@
   --header-image-gradient-blend-mode: lighten;
   --global-weight: 400;
   --picture-profile-background-url: url(../img/leaf_pattern_grey.svg);
+  --logo-url: url(../img/logobleu.svg);
+  --logo-text-url: url(../img/textebleu.svg);
   --form-input-color: rgb(255, 255, 255);
   --border-top-burger-color: rgba(0, 0, 0, 0.233);
 }
@@ -39,6 +41,8 @@
   --header-image-gradient-blend-mode: darken;
   --global-weight: 300;
   --picture-profile-background-url: url(../img/leaf_pattern_white.svg);
+  --logo-url: url(../img/logoblanc.svg);
+  --logo-text-url: url(../img/texteblanc.svg);
   --form-input-color: rgba(255, 255, 255, 0.514);
   --border-top-burger-color: rgba(255, 255, 255, 0.055);
 }
@@ -86,6 +90,7 @@ span {
 }
 
 .logo {
+  content:var(--logo-url);
   display: block;
   float: left;
   border-radius: 50%;
@@ -94,8 +99,12 @@ span {
   margin-top: 0.5rem;
   margin-right: 0.6rem;
   padding: 0.2rem;
-  background-color: var(--background-color-logo);
-  border: 3px solid var(--color-secondary);
+}
+
+.textlogo{
+  content:var(--logo-text-url);
+  margin-top: 1.6rem;
+  height: 2rem;
 }
 
 section:not(:first-child) {
@@ -170,7 +179,6 @@ section {
   background-color: transparent;
   color: var(--primary-text-color);
   
-
 }
 
 #darkModeButton:hover {
@@ -569,6 +577,10 @@ footer {
 @media only screen and (max-width: 1200px) {
   .header {
     font-size: 1.4rem;
+  }
+
+  .textlogo{
+    height: 1.7rem;
   }
 
   #welcome {
