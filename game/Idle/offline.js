@@ -1,0 +1,31 @@
+﻿{
+	"version": 1566003940,
+	"fileList": [
+		"data.js",
+		"c2runtime.js",
+		"jquery-2.1.1.min.js",
+		"offlineClient.js",
+		"images/tiledbg.png",
+		"images/car-sheet0.png",
+		"images/car-sheet1.png",
+		"images/title-sheet0.png",
+		"images/solid-sheet0.png",
+		"images/start-sheet0.png",
+		"images/nightlightbg.png",
+		"images/upgrades-sheet0.png",
+		"images/upengine-sheet0.png",
+		"images/upclose-sheet0.png",
+		"images/upacceleration-sheet0.png",
+		"images/car2-sheet0.png",
+		"images/upchangecar-sheet0.png",
+		"media/synthwave_-new-retro_-outrun_.m4a",
+		"media/synthwave_-new-retro_-outrun_.ogg",
+		"icon-16.png",
+		"icon-32.png",
+		"icon-114.png",
+		"icon-128.png",
+		"icon-256.png",
+		"loading-logo.png",
+		"penumbra.png"
+	]
+}
