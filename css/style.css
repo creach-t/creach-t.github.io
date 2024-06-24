@@ -451,6 +451,18 @@ section {
   background-color: rgb(54, 111, 185);
 }
 
+.tag--ejs {
+  background-color: rgb(181, 54, 185);
+}
+
+.tag--node {
+  background-color: rgb(177, 130, 216);
+}
+
+.tag--js {
+  background-color: rgb(209, 207, 85);
+}
+
 
 .social {
   list-style-type: none;

@@ -12,7 +12,9 @@
     "contact-subtitle": "connectons-nous",
     "specializations-nb": "*Je suis toujours enthousiaste à l'idée de plonger dans de nouvelles technologies et d'élargir mes compétences ! 😉",
     "project-name-1": "projet heros league",
-    "project-paragraphe-1": "Premier projet Front-End de niveau professionnel",
+    "project-paragraphe-1": "Premier projet front-end complet <br> Cela m'a donné l'occasion de mettre en pratique le responsive design",
+    "project-name-2": "projet Boutique O'coffee",
+    "project-paragraphe-2": "Premier projet Fullstack complet <br> Cela m'a donné l'occasion d'utiliser express et de faire un site web dynamique",
     "project-button": "Voir le projet",
     "contact-button": "Envoyer"
   }
