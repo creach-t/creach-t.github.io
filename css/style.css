@@ -379,6 +379,7 @@ section {
 
 .projects__card {
   position: relative;
+  min-width: 250px;
   flex-basis: 320px;
   height: 500px;
   background-color: var(--element-color);
@@ -394,21 +395,22 @@ section {
 }
 
 .tags{
-  margin: 0 -0.5rem 0 -0.5rem;
+  margin: 0 -1rem 0 -1rem;
   border-radius:  0.8rem 0.8rem 0 0;
   padding: 0 0.3rem 0 0.3rem;
+  flex-wrap: nowrap;
 }
 
 .card__title {
   font-size: 1.4rem;
   font-weight: 800;
-  margin: 0 -0.5rem 0rem -0.5rem;
+  margin: 0 -1.1rem 0rem -1.1rem;
   margin-bottom: 1rem;
   letter-spacing: 1px;
   color: var(--primary-text-color);
   text-align: center;
   text-transform: uppercase;
-  border-radius: 0 0 0.8rem 0.8rem ;
+  border-radius: 0 0 0.8rem 0.8rem;
 }
 
 .card__img {
@@ -506,6 +508,14 @@ section {
 
 .tag--bdd {
   background-color: rgb(95, 209, 85, 0.678);
+}
+
+.tag--react {
+  background-color: rgb(104, 240, 172, 0.678);
+}
+
+.tag--git {
+  background-color: rgba(185, 54, 104, 0.678);
 }
 
 
