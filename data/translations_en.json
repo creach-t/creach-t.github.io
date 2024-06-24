@@ -11,10 +11,10 @@
     "project-subtitle": "that i've worked on",
     "contact-subtitle": "let's connect",
     "specializations-nb": "*but I'm always excited to dive into new technologies and expand my skill set! 😉",
-"project-name-1": "Heroes League Project",
-    "project-paragraphe-1": "First complete front-end project <br> This gave me the opportunity to practice responsive design",
-    "project-name-2": "O'coffee Shop Project",
-    "project-paragraphe-2": "First complete fullstack project <br> This gave me the opportunity to use Express and create a dynamic website",
+"project-name-1": "Heroes League",
+    "project-paragraphe-1":  "Front-end | Responsive",,
+    "project-name-2": "Shop O'coffee ",
+    "project-paragraphe-2": "FullStack | Express | Authentification | API | PostgresSQL",
     "project-button": "View Project",
     "contact-button": "Send"
 
