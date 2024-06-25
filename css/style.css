@@ -417,14 +417,9 @@ section {
   width: 100%;
   margin-bottom: 1rem;
   border-radius: 0.8rem;
-  filter: brightness(55%);
+  filter: brightness(75%);
   z-index: 3000;
 }
-
-.card__img:hover {
-  filter: brightness(100%);
-}
-
 
 .card__paragraphe {
   margin-bottom: 1rem;
