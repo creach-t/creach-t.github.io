@@ -379,8 +379,8 @@ section {
 
 .projects__card {
   position: relative;
-  min-width: 250px;
-  flex-basis: 250px;
+  min-width: 320px;
+  flex-basis: 320px;
   height: 500px;
   background-color: var(--element-color);
   padding: 1.5rem;
@@ -849,6 +849,14 @@ footer {
   .section__title::before {
     width: 2em;
     height: 2em;
+  }
+
+  .projects__card{
+    min-width: 250px;
+  }
+
+  .tag{
+    font-size: 1.5rem;
   }
 
   #picture-profile {
