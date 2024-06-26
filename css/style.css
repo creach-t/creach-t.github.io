@@ -583,7 +583,7 @@ section {
 .form button {
   display: block;
   width: 10rem;
-  background-color: var(--element-color);
+  background-color: var(--color-secondary);
   padding: 0.5rem;
   margin: auto;
   border-radius: 0.5rem;
