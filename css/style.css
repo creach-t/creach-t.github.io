@@ -465,7 +465,7 @@ section {
 }
 
 .tag {
-  transform: translateY(-0.5rem);
+  transform: translateY(-1rem);
   display: inline-block;
   background-color: var(--element-color);
   padding: 0.3rem 0.4rem 0.1rem 0.4rem;
@@ -475,8 +475,6 @@ section {
   font-weight: 1000;
   /* border: 1px solid #0b0222; */
   color: #0b0222;
-  padding-top: -5rem;
-  margin-top: -5rem;
   backdrop-filter: blur(5px);
 
 }
