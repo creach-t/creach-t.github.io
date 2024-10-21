@@ -511,6 +511,10 @@ section {
   background-color: rgba(185, 54, 104, 0.678);
 }
 
+.tag--react {
+  background-color: rgba(41, 19, 100, 0.678);
+}
+
 
 .social {
   list-style-type: none;
